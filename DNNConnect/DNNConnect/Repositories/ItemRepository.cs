@@ -17,7 +17,7 @@ namespace DNNConnect.Repositories
         /// <returns>The stores.</returns>
         public static async Task<List<ItemModel>> GetItemsAsync()
         {
-            string url = "http://dnndev.me/DesktopModules/DnnSpaModule1/API/Item";
+            string url = "http://192.168.232.50/DesktopModules/DnnSpaModule1/API/Item";
             return await APIHelper.ExecuteAsync<List<ItemModel>>(url);
         }
     }

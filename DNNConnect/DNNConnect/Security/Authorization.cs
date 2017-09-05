@@ -1,5 +1,4 @@
 ﻿using System.Threading.Tasks;
-
 using Newtonsoft.Json;
 
 using DNNConnect.Helpers;
@@ -18,7 +17,7 @@ namespace DNNConnect.Security
             var login = new LoginModel { Username = username, Password = password };
             var loginJson = JsonConvert.SerializeObject(login).ToString();
 
-            string url = "http://dnndev.me/DesktopModules/JwtAuth/API/mobile/login";
+            string url = "http://192.168.232.50/DesktopModules/JwtAuth/API/mobile/login";
             return await APIHelper.PostEncodedData<JWTModel>(url, JsonConvert.SerializeObject(login).ToString());
         }
     }
